@@ -76,7 +76,7 @@ func main() {
 	fmt.Printf("Successful written abi: %s, bytecode: %s, userDoc: %s, devDoc: %s \n", abiFilePath, bytecodeFilePath, userDocFilePath, devDocFilePath)
 }
 
-func encode(filepath string, content any) error {
+func encode(filepath string, content interface{}) error {
 	abiFile, err := os.Create(filepath)
 	if err != nil {
 		return err
